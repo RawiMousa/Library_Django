@@ -14,6 +14,8 @@ import json
 from django.contrib.auth.models import User
 import logging
 from dal import autocomplete
+from django.core import serializers
+
 
 logger = logging.getLogger(__name__)
 
@@ -112,6 +114,8 @@ def books(request):
         'form': form,
     }
     return render(request, 'mylibrary/books.html', context)
+
+
 
 
 def bookdetail(request, pk):
@@ -340,4 +344,9 @@ def get_city_names(request):
     return JsonResponse(city_names, safe=False)
 
 
-    
+# def book_autocomplete(request):
+#     if request.is_ajax():
+#         q = request.GET.get('term', '')
+#         books = Book.objects.filter(name__icontains=q).values_list('name', flat=True)
+#         results = list(books)
+#         return JsonResponse(results, safe=False) 

@@ -20,19 +20,6 @@ class BookSelectForm(forms.Form):
         self.fields['book'].choices = [(book.pk, f"{book.name} (Available copies: {book.copies})") for book in Book.objects.all()]
         
 
-# class BookSelectForm(forms.Form):
-
-#     book = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control searchable-field'}))
-#     book_hidden = forms.CharField(widget=forms.HiddenInput(), required=False)
-
-#     def __init__(self, *args, **kwargs):
-#         super(BookSelectForm, self).__init__(*args, **kwargs)
-#         self.fields['book'].widget.attrs['id'] = 'id_book'
-#         self.fields['book_hidden'].widget.attrs['id'] = 'id_book_hidden'
-
-
-
-
 class CustomUserCreationForm(UserCreationForm): 
 
     username = forms.CharField(label='username', min_length=5, max_length=30,widget=forms.TextInput({'placeholder':"""Username"""}), help_text="""Username should contain 8-30 Characters, 
@@ -212,20 +199,9 @@ class NewBookForm(forms.ModelForm):
 
 class NewCustomerForm(forms.ModelForm):
 
-    # all_cities = City.objects.all().values()
-    # cities = []
-    # for i in range(len(all_cities)):
-    #     city = all_cities[i]
-    #     details_lst = []
-    #     key_value = ()
-    #     for detail in city.values():
-    #         details_lst.append(detail)
-    #         continue
-    #     key_value = (details_lst[0],details_lst[1])
-    #     cities.append(key_value)
 
     name = forms.CharField(max_length=40,widget=forms.TextInput({'placeholder':"""Name"""}),help_text='Name should be in English ONLY (spaces can be used),5-30 characters')
-    # city = forms.ChoiceField()
+
     city = forms.CharField(max_length=100,widget=forms.TextInput({'placeholder':"""City""" , 'id': 'id_city'}),help_text='City should be in English ONLY')
 
     age = forms.IntegerField(widget=forms.TextInput({'placeholder':"""Age"""}),help_text='Age should be between 12-120')

@@ -23,4 +23,6 @@ urlpatterns = [
     path('addcustomer', views.addcustomer, name='addcustomer'),
     path('loanbook/', views.loanbook, name='loanbook'),
     path('get_city_names/', views.get_city_names, name='get_city_names'), 
+    # path('book_autocomplete/', views.book_autocomplete, name='book_autocomplete'),
+
 ]
