@@ -1,0 +1,36 @@
+#name{
+    color: aliceblue;
+    margin-left: 560;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#city{
+    color: aliceblue;
+    margin-left: 570;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#age{
+    color: aliceblue;
+    margin-left: 570;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#Add{
+    color: aliceblue;
+    margin-left: 645;
+}
+
+#error {
+    text-align: center;
+    color: rgb(233, 200, 200);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}

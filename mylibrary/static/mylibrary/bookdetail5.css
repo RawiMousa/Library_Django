@@ -1,0 +1,34 @@
+
+#detail{
+    text-decoration: solid;
+    font-size: 17;
+    color: rgb(236, 218, 218);
+    font-weight: bolder;
+    font-family:monospace;
+    margin-left: 25;
+}
+
+#summary{
+    text-decoration: solid;
+    font-size: 17;
+    color: rgb(236, 218, 218);
+    font-weight: bolder;
+    font-family:monospace;
+    margin-left: 25;
+    margin-right: 700;
+}
+
+
+#removebook{
+    text-decoration:underline;
+    font-size: large;
+    color: rgb(222, 207, 207);
+    font-weight: bolder;
+    font-family:sans-serif;
+    margin-left: 25;
+}
+
+#wiki{
+    font-weight: bolder;
+    color: aliceblue;
+}

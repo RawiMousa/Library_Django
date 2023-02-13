@@ -1,0 +1,25 @@
+{% extends 'mylibrary/main.html' %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'mylibrary/loans1.css' %}">
+   <a id="NewLoan" href="{% url 'mylibrary:loanbook' %}">Loan A book</a>
+   {% if all_loans %}
+    <h3>On going loans : </h3>
+    {% for loan in all_loans %}
+        <p><a id="Loans" href="{% url 'mylibrary:loandetail' loan.id %}"><ul>
+            <li>Customer Id : {{ loan.cust_id }} <br>
+            Book Id : {{ loan.book }} <br>
+            Loandate : {{ loan.loandate }} <br>
+            Returndate : {{ loan.returndate }} 
+            </li>
+            <br>
+        </ul></a></p>
+
+                
+        {% endfor %}
+    {% else %}
+    <p id="noloans">No loans.</p>
+    <br>
+    
+{% endif %}
+{% endblock %}

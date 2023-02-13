@@ -1,0 +1,22 @@
+{% extends 'mylibrary/main.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'mylibrary/bookdetail5.css' %}">
+    <p id="detail">Bood ISBN : {{ book.isbn }}</p>
+    <br>
+    <p id="detail">Book name : {{ book.name }}</p>
+    <br>
+    <p id="detail">Author : {{ book.author }}</p>
+    <br>
+    <p id="detail">Year published : {{ book.pub_year }}</p>
+    <br>
+    <p id="summary">Summary : {{ book.summary }}</p>
+    <br>
+    <p id="detail">Available copies : {{book.copies }}</p>
+    <br>
+    <p id="detail"> <a id="wiki" href="{{book.wikipedia}}">Wikipedia</a></p>
+    <br>
+    <a id="removebook" href="{% url 'mylibrary:removebook' book.id %}">Remove Book</a>
+
+    {% endblock %}

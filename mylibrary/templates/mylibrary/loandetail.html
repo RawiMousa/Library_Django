@@ -1,0 +1,12 @@
+{% extends 'mylibrary/main.html' %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mylibrary/loandetail.css' %}">
+    <p class="color-fade" id="detail">Customer Id : {{ loan.cust_id }}</p>
+    <p class="color-fade" id="detail">Customer name : {{ customer_name }}</p>
+    <p class="color-fade" id="detail">Book name : {{ book_name }}</p>
+    <p class="color-fade" id="detail">Loandate : {{ loan.loandate }}</p>
+    <p class="color-fade" id="detail">Returndate : {{ loan.returndate }}</p>
+    <br>
+    <a class="color-fade" id="deleteloan" href="{% url 'mylibrary:removeloan' loan.id %}">Remove Loan</a>
+{% endblock %}

@@ -1,0 +1,41 @@
+#username{
+    color: aliceblue;
+    margin-left: 550;
+}
+
+#email{
+    color: aliceblue;
+    margin-left: 585;
+}
+
+#password1{
+    color: aliceblue;
+    margin-left: 555;
+}
+
+#password2{
+    color: aliceblue;
+    margin-left: 493;
+}
+
+
+/* #confirm{
+    color: aliceblue;
+    margin-left: 500;
+} */
+
+#signup{
+    margin-left: 680;
+}
+
+#error {
+    text-align: center;
+    color: rgb(233, 200, 200);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+
+

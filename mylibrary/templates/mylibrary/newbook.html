@@ -1,0 +1,125 @@
+{% extends 'mylibrary/main.html' %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mylibrary/newbook2.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <form id="addbook" action="{% url 'mylibrary:addbook' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label id="isbn" for="{{ form.isbn.id_for_label }}">ISBN : </label>
+            {{ form.isbn }}
+            <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.isbn.help_text }}">?</button>
+            {% if form.isbn.errors %}
+            <ul>
+              {% for error in form.isbn.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <label id="name" for="{{ form.name.id_for_label }}">Bookname : </label>
+            {{ form.name }}
+            <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.name.help_text }}">?</button>
+            {% if form.name.errors %}
+            <ul>
+              {% for error in form.name.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <label id="author" for="{{ form.author.id_for_label }}">Author : </label>
+            {{ form.author }}
+            <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.author.help_text }}">?</button>
+            {% if form.author.errors %}
+            <ul>
+              {% for error in form.author.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <label id="year" for="{{ form.pub_year.id_for_label }}">Published year : </label>
+            {{ form.pub_year }}
+            <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.pub_year.help_text }}">?</button>
+            {% if form.pub_year.errors %}
+            <ul>
+              {% for error in form.pub_year.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <label id="type" for="{{ form.type.id_for_label }}">Book type : </label>
+            {{ form.type }}
+            <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.type.help_text }}">?</button>
+            {% if form.type.errors %}
+            <ul>
+              {% for error in form.type.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <label id="copies" for="{{ form.copies.id_for_label }}">Copies : </label>
+            {{ form.copies }}
+            <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.copies.help_text }}">?</button>
+            {% if form.copies.errors %}
+            <ul>
+              {% for error in form.copies.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <p id="summary">Summary : <label for="{{ form.type.id_for_label }}"></label></p>
+           <p id="sumtextarea"> {{ form.summary }}</p>
+            <button id="sumbutton" type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.summary.help_text }}">?</button>
+            {% if form.summary.errors %}
+            <ul>
+              {% for error in form.summary.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+        <div class="form-group">
+            <p id="wikipedia"><label for="{{ form.type.id_for_label }}">Wikipedia : </label></p>
+            <p id="wikitextarea">{{ form.wikipedia }}</p>
+            <button id="wikibutton" type="button" class="btn btn-light btn-sm" data-toggle="tooltip" data-placement="right" title="{{ form.wikipedia.help_text }}">?</button>
+            {% if form.wikipedia.errors %}
+            <ul>
+              {% for error in form.wikipedia.errors %}
+              <p id="error">{{ error }}</p>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </div>
+
+          <button id="Add" type="submit" class="btn btn-primary">Add Book</button>
+    </form>
+
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+      </script>
+{% endblock %}

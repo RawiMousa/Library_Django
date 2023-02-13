@@ -1,0 +1,65 @@
+{% extends 'mylibrary/main.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'mylibrary/books.css' %}">
+<!-- jQuery UI CSS -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<!-- jQuery UI JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+<h1>Books</h1>
+     <a id="NewBook" href="{% url 'mylibrary:addbook' %}">Add new Book</a>
+
+<style>
+    .form-control {
+        width: 25%;
+        width: auto;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #f9f6f3;
+        text-align: center;
+        margin-left: 450;
+        border: none;
+        font-weight: bolder;
+        font-family: fantasy;
+        font-size: 21;
+        outline: none;
+        box-shadow: none;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        background-color: #b4b2b0;
+        border: none;
+        box-shadow: none;
+    }
+    
+    label {
+        font-weight: bold;
+        border: none;
+        margin-right: 10px;
+        background-color: #b4b2b0;
+        border: none;
+        box-shadow: none;
+    }
+
+    #select{
+        margin-left: 678;
+    }
+    </style>
+
+
+  
+  <form method="post">
+    {% csrf_token %}
+    {{ form.book }}
+    <button id="select" type="submit" value="Select Book" class="btn btn-primary">Select</button>
+
+  </form>
+
+
+{% endblock %}
+

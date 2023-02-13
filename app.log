@@ -1,0 +1,9 @@
+
+INFO:django.utils.autoreload:/Library_Django2/mylibrary/views.py changed, reloading.
+INFO:django.utils.autoreload:/Library_Django2/mylibrary/views.py changed, reloading.
+INFO:django.utils.autoreload:/Library_Django2/mylibrary/views.py changed, reloading.
+/Library_Django2/mylibrary/views.py changed, reloading.
+2023-02-08 15:47:03,771 - mylibrary.views - INFO - thie is logout
+2023-02-08 15:47:09,773 - mylibrary.views - INFO - thie is logout
+2023-02-08 15:47:59,130 - mylibrary.views - INFO - thie is logout
+2023-02-08 15:55:19,489 - django.utils.autoreload - INFO - /Library_Django2/mylibrary/views.py changed, reloading.

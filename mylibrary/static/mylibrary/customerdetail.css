@@ -1,0 +1,31 @@
+#detail{
+    text-decoration: solid;
+    font-size: x-large;
+    color: rgb(198, 226, 163);
+    font-weight: bolder;
+    font-family:monospace;
+    margin-left: 550;
+}
+
+#removecustomer{
+    text-decoration:underline;
+    font-size: large;
+    color: rgb(243, 232, 232);
+    font-weight: bolder;
+    font-family:sans-serif;
+    margin-left: 550;
+}
+
+.color-fade {
+    color: green;
+    animation: color-fade 0.5s linear forwards;
+  }
+  
+  @keyframes color-fade {
+    0% {
+      color: rgb(50, 80, 50);
+    }
+    100% {
+      color: rgb(255, 255, 255);
+    }
+  }

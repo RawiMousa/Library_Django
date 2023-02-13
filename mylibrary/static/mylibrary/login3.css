@@ -1,0 +1,53 @@
+body{
+    background-image: url('images/books.jpg');
+    background-size: cover
+}
+
+h1{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+
+#login{
+    text-align: center;
+    font-size: larger;
+}
+
+#AA{
+    margin-right: 100;
+    color: rgb(242, 236, 236);
+}
+
+#loginButton{
+    color: antiquewhite;
+    /* font-size: x-large; */
+}
+
+#submit{
+    font-style: oblique;
+}
+
+#failed{
+    color: rgb(242, 236, 236);
+    font-size: x-large;
+}
+
+#notregistered{
+    color: rgb(242, 236, 236);
+    text-decoration: solid;
+}
+
+#underline{
+    text-decoration: underline;
+}
+
+
+#msgdesign{
+    margin-right: 567;
+}
+
+
+
+
+

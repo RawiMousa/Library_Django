@@ -1,0 +1,41 @@
+
+
+
+#Loans{
+    text-decoration: solid;
+    font-size: large;
+    color: rgb(236, 226, 226);
+    font-weight: bolder;
+    font-family:monospace 
+}
+
+#NewLoan{
+    font-family: monospace;
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(241, 228, 228);
+    margin-left: 642;
+}
+
+h3{
+    color: rgb(246, 238, 238);
+    margin-left: 15;
+}
+
+#homepage{
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(28, 12, 12);
+    margin-left: 450;
+}
+
+#noloans{
+    font-family: monospace;
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(241, 228, 228);
+    margin-left: 25;
+}

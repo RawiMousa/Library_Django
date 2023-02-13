@@ -1,0 +1,21 @@
+{% extends 'mylibrary/main.html' %}
+{% block content %}
+{% load static %}
+
+    <link rel="stylesheet" href="{% static 'mylibrary/customers.css' %}">
+    <h1 id="suck">Customers</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<body>
+    <a id="NewCustomer" href="{% url 'mylibrary:addcustomer' %}">Add new customer</a>
+    {% if all_customers %}
+    {% for customer in all_customers %}
+        <p><a id="Customers" href="{% url 'mylibrary:customerdetail' customer.id %}">{{ customer.name }}</a></p>
+                {% endfor %}    
+    {% else %}
+    <p>No customers.</p>
+{% endif %}
+{% endblock %}

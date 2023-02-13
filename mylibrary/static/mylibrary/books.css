@@ -1,0 +1,36 @@
+#Books{
+    text-decoration: solid;
+    font-size: x-large;
+    color: rgb(233, 220, 220);
+    font-family: fantasy; 
+    font-weight: bold;
+    margin-left: 25;
+}
+
+#NewBook{
+    position: relative;
+    font-family: monospace;
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(241, 228, 228);
+    margin-left: 635;
+}
+
+#B{
+    font-size: large;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+
+}
+
+
+
+h1{
+    font-family: fantasy;
+    text-decoration: solid;
+    font-size: 56;
+    color: aliceblue;
+    margin-left: 25; 
+}
+

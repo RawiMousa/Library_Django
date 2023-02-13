@@ -1,0 +1,26 @@
+#Customers{
+    text-decoration: solid;
+    font-size: x-large;
+    color: rgb(238, 228, 228);
+    font-weight: bolder;
+    font-family:monospace;
+    margin-left: 25;
+}
+
+#NewCustomer{
+    font-family: monospace;
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(241, 228, 228);
+    margin-left: 605;
+}
+
+
+#suck{
+    font-family: fantasy;
+    text-decoration: solid;
+    font-size: 56;
+    color: rgb(254, 254, 254);
+    margin-left: 25; 
+}

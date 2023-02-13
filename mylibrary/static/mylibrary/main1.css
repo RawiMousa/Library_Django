@@ -1,0 +1,40 @@
+body{
+    background-image: url('images/books.jpg');
+    background-size: cover
+}
+
+#logout{
+    text-align: center;
+}
+
+#a{
+    color: aliceblue;
+    font-size: x-large;
+    font-family: monospace;
+    
+}
+
+#a:hover {
+    color: rgb(13, 192, 3);
+  }
+
+
+.container {
+  display: block;
+}
+
+#baba{
+  background-color: rgb(0, 0, 0);
+  border-color: black;
+}
+
+button{
+  background-color: rgb(0, 0, 0);
+  border-color: black;
+}
+
+.active {
+  background-color: rgb(44, 181, 16);
+}
+
+

@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mylibrary/login3.css' %}">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <style>
+        .messages p.error{
+          text-align: center;
+          padding: 10px;
+          background-color: #f74f4f;
+          border-radius: 4px;
+          z-index: 999;
+          font-size: larger;
+          color: rgb(0, 0, 0);
+          text-decoration: solid;
+          font-weight: bolder;
+          font-family:monospace;
+        }
+
+        .messages p.success{
+          text-align: center;
+          padding: 10px;
+          background-color: #379524;
+          border-radius: 4px;
+          z-index: 999;
+          font-size: larger;
+          color: rgb(0, 0, 0);
+          text-decoration: solid;
+          font-weight: bolder;
+          font-family:monospace;
+        }
+      </style>
+</head>
+<body>
+  {% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+      <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
+    <h1>Welcome To My Library</h1>
+
+  <script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.messages').fadeOut();
+      }, 3000);  // 3000 milliseconds = 3 seconds
+    });
+  </script>
+
+    <form id="login" action="{% url 'mylibrary:userLogin' %}" method="post">
+        
+    {% csrf_token %}
+    <p id="AA">Username : <input type="text" name="username" placeholder="username" required></p>
+    <p id="AA">Password : <input type="password" name="password" placeholder="password" required></p>
+    <input id="loginButton" class="btn btn-success"  id='submit' type="submit"  value="Login"><br><br>
+    
+    <a id="notregistered" href="{% url 'mylibrary:register' %}">Not registered? Click <span id="underline">here</span> to sign up</a>
+
+    <p id="failed">{{msg}}</p> 
+
+    {% block content %}{% endblock %}
+
+
+
+
+
+</body>
+</html>
