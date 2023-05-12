@@ -9,7 +9,6 @@ from django.contrib.auth.forms import UserCreationForm
 import re
 from datetime import date , timedelta
 from django.shortcuts import get_object_or_404
-from dal import autocomplete
 
 
 class BookSelectForm(forms.Form):

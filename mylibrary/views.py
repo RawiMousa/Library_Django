@@ -13,7 +13,6 @@ from django.contrib.auth.forms import UserCreationForm
 import json
 from django.contrib.auth.models import User
 import logging
-from dal import autocomplete
 from django.core import serializers
 
 

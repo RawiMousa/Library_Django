@@ -20,7 +20,6 @@ from django.conf import settings
 
 urlpatterns = [
     path("", include("mylibrary.urls")),
-    path("select2/", include("django_select2.urls")),
     # path("book-autocomplete/", include("dal.urls")),
     path('admin/', admin.site.urls),
     
